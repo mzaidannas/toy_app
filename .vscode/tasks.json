@@ -4,13 +4,26 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "bundle",
+            "taskName": "bundle install development",
+            "command": "bundle",
+            "args": [
+                "install",
+                "--without",
+                "production"
+            ],
+            "type": "shell",
+            "group": "build",
+            "suppressTaskName": true
+        },
+        {
+            "taskName": "bundle install production",
             "command": "bundle",
             "args": [
                 "install"
             ],
             "type": "shell",
-            "group": "build"
+            "group": "none",
+            "suppressTaskName": true
         }
     ]
 }
